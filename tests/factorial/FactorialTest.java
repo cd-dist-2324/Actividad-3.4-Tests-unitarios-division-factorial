@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
@@ -67,6 +66,7 @@ public class FactorialTest {
     @Test
     void testC6() throws Exception {
 
+        
         byte entrada = Byte.MAX_VALUE;
         assertEquals(Float.POSITIVE_INFINITY, app.factorial(entrada));
 
