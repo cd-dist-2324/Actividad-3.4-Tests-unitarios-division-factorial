@@ -47,6 +47,8 @@ public class FactorialTest {
 
     }
 
+   
+
     @Test
     void testC4() throws Exception {
 
@@ -58,14 +60,6 @@ public class FactorialTest {
     @Test
     void testC5() throws Exception {
 
-        byte entrada = 4;
-        assertEquals(24F, app.factorial(entrada));
-
-    }
-
-    @Test
-    void testC6() throws Exception {
-
         
         byte entrada = Byte.MAX_VALUE;
         assertEquals(Float.POSITIVE_INFINITY, app.factorial(entrada));
@@ -73,8 +67,15 @@ public class FactorialTest {
     }
 
      @Test
-    public void testC7() {
+    public void testC6() {
         byte entrada = -1;
+        Exception exception = assertThrows(Exception.class, () -> app.factorial(entrada));
+        assertEquals("Error. El número tiene que ser >=0", exception.getMessage());
+
+    }
+    @Test
+    public void testC7() {
+        byte entrada = -128;
         Exception exception = assertThrows(Exception.class, () -> app.factorial(entrada));
         assertEquals("Error. El número tiene que ser >=0", exception.getMessage());
 
