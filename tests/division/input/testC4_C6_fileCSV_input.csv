@@ -1,0 +1,3 @@
+dividendo, divisor, salida_esperada
+3.40282E+38, 1.40130E-45, +Infinity
+0,  1.40130E-45, 0
